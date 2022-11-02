@@ -3,6 +3,9 @@ package org.springframework.samples.petclinic.product;
 import java.util.List;
 
 public class ProductService {
+
+    ProductRepository productRepository;
+
     public List<Product> getAllProducts(){
         return null;
     }
@@ -19,5 +22,8 @@ public class ProductService {
         return null;       
     }
 
+    public List<ProductType> findAllProductTypes(){
+        return productRepository.findAllProductTypes();
+    }
     
 }
